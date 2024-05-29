@@ -1,0 +1,3 @@
+class VIFParser():
+    def __init__(self) -> None:
+        ...

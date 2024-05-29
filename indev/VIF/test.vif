@@ -1,0 +1,52 @@
+# Example of a VIF configuration file
+
+[EditorVersion:VER]
+    1.20.2
+
+[EditorSize:INT]
+    24
+
+[EditorClass:ID]
+    MyEditorClass
+
+[EditorTitle:STR]
+    My Editor {EditorVersion}
+
+[EditorBackground:HEX]
+    0x20FCBB
+
+[EditorDescription:LONG]
+    My editor are the best of
+    the MazeGroup Store. You
+    can't find best. (END)
+
+[EditorLevel:CHAR]
+    A
+
+[EditorExtension:EXT]
+    .txt
+
+[EditorWebsite:URL]
+    https://store.mazegroup.org/myeditor/
+
+[EditorCode:PATH]
+    /src/main.py
+
+[EditorAuthor:PERSON]
+    DOE John
+
+[EditorPassword:HASH]
+    7110eda4d09e062aa5e4a390b0a572ac0d2c0220
+
+[EditorTeam:LIST]
+    PERSON:
+        DOE Mike
+    PERSON: DOE Mickael
+    User1:LIST :
+        Username:NAME :
+            John2531
+        Password:HASH :
+            {EditorPassword}
+
+[EditorAdmin:LINK]
+    EditorTeam.User1
