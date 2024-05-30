@@ -1,3 +1,3 @@
 # Kernel levels :
 - **Kernel0** : All codes from the VM Machine and the runner
-- **Kernel1**
+- **Kernel1** : All codes from the OS
