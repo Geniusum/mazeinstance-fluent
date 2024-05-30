@@ -39,13 +39,13 @@
     7110eda4d09e062aa5e4a390b0a572ac0d2c0220
 
 [EditorTeam:LIST]
-    PERSON:
+    [PERSON]
         DOE Mike
-    PERSON: DOE Mickael
-    User1:LIST :
-        Username:NAME :
+    [PERSON] DOE Mickael
+    [User1:LIST]
+        [Username:NAME]
             John2531
-        Password:HASH :
+        [Password:HASH]
             {EditorPassword}
 
 [EditorAdmin:LINK]
