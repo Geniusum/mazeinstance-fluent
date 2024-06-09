@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MazeInstance Development Documentation</title>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .sidebar, .page{
+           flex: 1;
+        }
+
+        .page{
+            min-width: min(500px, 100vw);
+        }
+
+        .sidebar{
+            width: 260px;
+            max-width: 260px;
+            height: auto;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #EEEEEE;
+            border: inset 1px lightgray;
+            outline: outset 1px lightgray;
+        }
+
+        @media (max-width: 700px) {
+            .sidebar{
+                width: 100vw;
+                max-width: none;
+            }
+        }
+
+        .sidebar ul{
+            padding-inline-start: 20px;
+        }
+
+        section{
+            padding-left: 10px;
+        }
+
+        .page{
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .page p{
+            width: min(800px, 100%);
+        }
+
+        .right{
+            float: right;
+        }
+
+        code{
+            padding: 2px;
+            background: lightgray;
+        }
+
+        div.code{
+            font-family: "Consolas";
+            width: min(800px, 100%);
+            height: auto;
+            background: lightgray;
+            padding: 4px;
+        }
+
+        div.note{
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            width: min(800px, 100%);
+            height: auto;
+            background: lightgray;
+            padding: 4px;
+            padding-left: 8px;
+            box-shadow: -4px 0px gray;
+            box-sizing: border-box;
+        }
+        
+        .page a{
+            text-decoration: none;
+            color: blue;
+        }
+
+        .page a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>MazeInstance</h2>
+        <p style="font-style: italic;">MazeInstance/Fluent and model documentation</p>
+        <p>This documentation aims to keep the development of MazeInstance Fluent and any other version of it on the right path and keep the initial ideas.</p><br>
+        <a href="https://github.com/Geniusum/mazeinstance-fluent">↗ GitHub (Draft, InDev version)</a><br>
+        <a href="https://mazegroup.org/">↗ MazeGroup</a>
+        <hr>
+        <ul>
+            <li>
+                <h3 style="margin-bottom: 0;">K.O.L. <a class="right" href="#1">🔗</a></h3>
+                <ul>
+                    <li>
+                        Meaning and presentation <a class="right" href="#1-1">🔗</a>
+                        <ul>
+                            <li>
+                                <a href="#1-1-1">Abbreviation</a>
+                            </li>
+                            <li>
+                                <a href="#1-1-2">What's for ?</a>
+                            </li>
+                            <li>
+                                <a href="#1-1-3">Structuration</a>
+                            </li>
+                            <li>
+                                <a href="#1-1-4">Key rules</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <footer>
+            <p>Documentation by Genius_um</p>
+            <p>MazeGroup - 2024<br>MazeInstance - since 2023</p>
+        </footer>
+    </div>
+    <div class="page">
+        <span style="font-weight: 900; font-style: italic;">Official documentation from MazeGroup, written in June, 2024.</span>
+        <hr>
+        <section id="1">
+            <h1>K.O.L.</h1>
+            <section id="1-1">
+                <h2>Meaning and presentation</h2>
+                <section id="1-1-1">
+                    <h3>Abbreviation</h3>
+                    <p>K.O.L. means <b>K</b>ernels <b>O</b>perations <b>L</b>ibrary, if we want specify more, A.K.O.L. for <b>A</b>rtificial <b>K</b>ernels <b>O</b>perations <b>L</b>ibrary.</p>
+                    <div class="note">We will say K.O.L. more often than A.K.O.L. in this documentation.</div>
+                </section>
+                <section id="1-1-2">
+                    <h3>What's for ?</h3>
+                    <p>K.O.L./A K.O.L. is an artificial kernels library which allows you to control the processes within your reach using your own tools. It is installed on another kernel which is that of the <a href="https://en.wikipedia.org/wiki/Operating_system">hosting operating system</a> which limits it on a larger scale. It is often referred to as a subkernel. It is useful in environments that are completely different from the <a href="https://en.wikipedia.org/wiki/Operating_system">hosting operating system</a>, what is called a <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine.</a></p>
+                    
+                    <p>Within a <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a>, the subkernel created by K.O.L. can execute tasks and manage resources independently from the host OS. This separation provides several benefits including enhanced security, resource isolation, and the ability to run different operating systems concurrently on a single <a href="https://en.wikipedia.org/wiki/Hardware_Platform_Interface">hardware platform.</a></p>
+                    
+                    <p>This system is also made in a <a href="https://en.wikipedia.org/wiki/High-level_programming_language">higher level language</a> than that of the <a href="https://en.wikipedia.org/wiki/Operating_system">hosting operating system</a>. So it's slower but easier to contribute and modify. It is still made up of several programming languages, all communicating with the tools offered by the <a href="https://en.wikipedia.org/wiki/Operating_system">hosting operating system</a> (this means: file flow, configuration, etc.). This also means that the <a href="https://en.wikipedia.org/wiki/Operating_system">hosting operating system</a> must have the necessary dependencies, an execution environment for the languages ​​used (therefore installed) and the classic folder/file diagram. The best would be to use an operating system under a <a href="https://en.wikipedia.org/wiki/GNU/Linux_naming_controversy">GNU/Linux</a> or <a href="https://en.wikipedia.org/wiki/Linux_kernel">Unix kernel</a>, otherwise, some K.O.L. supports <a href="https://en.wikipedia.org/wiki/Microsoft_Windows">Windows</a> (and the previous one at the same time).</p>
+                    
+                    <p>K.O.L. systems are practical for embedded systems and mini-operating systems, because their use does not require <a href="https://en.wikipedia.org/wiki/Low-level_programming_language">low-level language</a>.</p>
+                </section>
+                <section id="1-1-3">
+                    <h3>Structuration</h3>
+                    <p>A normal K.O.L. will be made in a <a href="https://en.wikipedia.org/wiki/High-level_programming_language">high level language</a>, C++ or Python by example. It needs configuration files, so take a configuration format like <code>YAML</code>, <code>INI</code> or <code>TOML</code>. <i>Why an old configuration format ?</i> Because moderns configuration and data storage formats like <code>JSON</code> or <code>XML</code> are more heavier in file size and the parser library (from your programming language) of these formats will be slow also. But the goal of a K.O.L. is to be lightweight, enough fast and adaptive.</p>
+
+                    <p>In terms of structuring, a K.O.L. must be flexible and allow multi-threading and adaptation from one language to another (via configuration files). Its libraries must be able to follow the same model and have a relationship with each other. The methods must be optimized and remove any residue. If you use a language like C, using a <a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">garbage collector</a> is the best solution to optimize methods.</p>
+                </section>
+                <section id="1-1-4">
+                    <h3>Key rules</h3>
+                    <p>Here are the key rules to follow to make a K.O.L. :</p>
+                    <ul>
+                        <li>Create functions/procedures/methods for any automation, any action that is a little long or cumbersome.</li>
+                        <li>Type everything that can be typed is the only way to avoid entering values ​​with a type that cannot be used in the situation and making a fatal error.</li>
+                        <li>Cushion all errors, your K.O.L. must have an error handler to do this.</li>
+                        <li>Separate each fully executed piece of code into functions/procedures/methods.</li>
+                        <li>A function/procedure/method must only do one very specific thing, it has a goal and must do it, if it must do something else it just has to call another function.</li>
+                        <li>Make a tidy logging system, with errors presented and tracebacks. Make it easy to trace the execution path between functions/procedures/methods.</li>
+                        <li>Declare, initialize, assign then subsequently delete if it is not a constant.</li>
+                        <li>Document your code, even for you.</li>
+                        <li>Do not choose the names of functions/procedures/methods/variables/constants/others randomly and above all make sure that each of them has a specific case type.</li>
+                    </ul>
+                </section>
+        </section>
+    </div>
+</body>
+</html>

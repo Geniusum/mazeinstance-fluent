@@ -1,0 +1,5 @@
+- Statics/dynamic configuration : `.ini`
+- [MORE LATER] Configuration : `.vif`
+- UI Generation : `cairo` from Python (`pycairo`)
+- Display : `tkinter` from Python
+- Image processing : `pillow` form Python
